@@ -26,7 +26,7 @@ public class MyFileWriter {
         // } catch (IOException e) {
         //     e.printStackTrace();
         // }
-        BufferedWriter bw = new BufferedWriter(new FileWriter("hiddenpassword.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(".hiddenpassword.txt"));
         bw.write ("lake123");
         bw.close();
 
