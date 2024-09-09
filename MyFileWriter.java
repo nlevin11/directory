@@ -37,6 +37,7 @@ public class MyFileWriter {
         BufferedWriter bw2 = new BufferedWriter(new FileWriter(hiddenFile));
         bw2.write ("this is top secret");
         bw2.close();
+        
         // 3. Using FileOutputStream
         // try (FileOutputStream outputStream = new FileOutputStream(fileName3)) {
         //     outputStream.write(data.getBytes());
