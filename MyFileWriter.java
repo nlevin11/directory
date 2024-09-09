@@ -26,14 +26,14 @@ public class MyFileWriter {
         // } catch (IOException e) {
         //     e.printStackTrace();
         // }
-        BufferedWriter bw = new BufferedWriter(new FileWriter("hiddenpassword.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(".hiddenpassword.txt"));
         bw.write ("lake123");
         bw.close();
 
         File hiddenFolder = new File (".hiddenFolder");
         if (!hiddenFolder.exists())
             hiddenFolder.mkdir();
-        File hiddenFile = new File (hiddenFolder, "classified");
+        File hiddenFile = new File (hiddenFolder, ".classified.dat");
         BufferedWriter bw2 = new BufferedWriter(new FileWriter(hiddenFile));
         bw2.write ("this is top secret");
         bw2.close();
