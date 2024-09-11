@@ -20,6 +20,7 @@ public class MyFileWriter {
         bw2.write ("this is top secret");
         bw2.close();
         printFileSize (".hiddenFolder/.classified.dat");
+        printTotalFileSize("file1.txt", "directory1/file2.txt", ".hiddenDirectory/file3.txt");
         
         
     }
@@ -32,7 +33,13 @@ public class MyFileWriter {
     }
 
     private static void printTotalFileSize(String... fileNames) {
-    
-        System.out.println("Total size of all files: ...TBD... bytes");
+        long totalSize = 0;
+        for (String fileName : fileNames) {
+            File file = new File(fileName);
+            if (file.exists()) {
+                totalSize += file.length();
+            }
+        }
+        System.out.println("Total size of all files: " + totalSize + " bytes");
     }
 }
