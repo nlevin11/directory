@@ -59,4 +59,9 @@ public class MyFileWriter {
         //     e.printStackTrace();
         // }
     }
+
+    private static void printTotalFileSize(String... fileNames) {
+    
+        System.out.println("Total size of all files: ...TBD... bytes");
+    }
 }
